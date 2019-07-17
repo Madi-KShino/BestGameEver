@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5335B9AD22DF7C99002E7CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335B9AC22DF7C99002E7CA9 /* AppDelegate.swift */; };
-		5335B9AF22DF7C99002E7CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335B9AE22DF7C99002E7CA9 /* ViewController.swift */; };
 		5335B9B222DF7C99002E7CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5335B9B022DF7C99002E7CA9 /* Main.storyboard */; };
 		5335B9B422DF7C9B002E7CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5335B9B322DF7C9B002E7CA9 /* Assets.xcassets */; };
 		5335B9B722DF7C9B002E7CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5335B9B522DF7C9B002E7CA9 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		5335B9A922DF7C99002E7CA9 /* BestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5335B9AC22DF7C99002E7CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5335B9AE22DF7C99002E7CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5335B9B122DF7C99002E7CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5335B9B322DF7C9B002E7CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5335B9B622DF7C9B002E7CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,61 @@
 		5335B9AB22DF7C99002E7CA9 /* BestApp */ = {
 			isa = PBXGroup;
 			children = (
+				5335B9C222DF93DC002E7CA9 /* Views */,
+				5335B9C122DF93D6002E7CA9 /* Model */,
+				5335B9C322DF93E9002E7CA9 /* Controllers */,
+				5335B9BE22DF93A0002E7CA9 /* Resources */,
+			);
+			path = BestApp;
+			sourceTree = "<group>";
+		};
+		5335B9BE22DF93A0002E7CA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				5335B9AC22DF7C99002E7CA9 /* AppDelegate.swift */,
-				5335B9AE22DF7C99002E7CA9 /* ViewController.swift */,
-				5335B9B022DF7C99002E7CA9 /* Main.storyboard */,
 				5335B9B322DF7C9B002E7CA9 /* Assets.xcassets */,
 				5335B9B522DF7C9B002E7CA9 /* LaunchScreen.storyboard */,
 				5335B9B822DF7C9B002E7CA9 /* Info.plist */,
 			);
-			path = BestApp;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5335B9BF22DF93C3002E7CA9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5335B9C022DF93CD002E7CA9 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		5335B9C122DF93D6002E7CA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5335B9C222DF93DC002E7CA9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5335B9B022DF7C99002E7CA9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5335B9C322DF93E9002E7CA9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5335B9C022DF93CD002E7CA9 /* Model Controllers */,
+				5335B9BF22DF93C3002E7CA9 /* View Controllers */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +180,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5335B9AF22DF7C99002E7CA9 /* ViewController.swift in Sources */,
 				5335B9AD22DF7C99002E7CA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MJ3MC3A9A;
-				INFOPLIST_FILE = BestApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BestApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MJ3MC3A9A;
-				INFOPLIST_FILE = BestApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BestApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
