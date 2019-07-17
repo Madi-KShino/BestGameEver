@@ -59,10 +59,9 @@
 		5335B9AB22DF7C99002E7CA9 /* BestApp */ = {
 			isa = PBXGroup;
 			children = (
-				2CE5338322DF9633005C6142 /* Custom Views */,
 				5335B9C222DF93DC002E7CA9 /* Views */,
-				5335B9C122DF93D6002E7CA9 /* Model */,
 				5335B9C322DF93E9002E7CA9 /* Controllers */,
+				5335B9C122DF93D6002E7CA9 /* Model */,
 				5335B9BE22DF93A0002E7CA9 /* Resources */,
 			);
 			path = BestApp;
@@ -111,6 +110,7 @@
 		5335B9C322DF93E9002E7CA9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2CE5338322DF9633005C6142 /* Custom Views */,
 				5335B9C022DF93CD002E7CA9 /* Model Controllers */,
 				5335B9BF22DF93C3002E7CA9 /* View Controllers */,
 			);
