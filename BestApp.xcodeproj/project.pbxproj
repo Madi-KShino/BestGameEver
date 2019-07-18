@@ -12,6 +12,8 @@
 		5335B9B222DF7C99002E7CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5335B9B022DF7C99002E7CA9 /* Main.storyboard */; };
 		5335B9B422DF7C9B002E7CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5335B9B322DF7C9B002E7CA9 /* Assets.xcassets */; };
 		5335B9B722DF7C9B002E7CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5335B9B522DF7C9B002E7CA9 /* LaunchScreen.storyboard */; };
+		5348DB1E22E0D700004060AA /* GridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5348DB1D22E0D700004060AA /* GridButton.swift */; };
+		5348DB2022E0D737004060AA /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5348DB1F22E0D737004060AA /* GridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		5335B9B322DF7C9B002E7CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5335B9B622DF7C9B002E7CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5335B9B822DF7C9B002E7CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5348DB1D22E0D700004060AA /* GridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridButton.swift; sourceTree = "<group>"; };
+		5348DB1F22E0D737004060AA /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,8 @@
 		2CE5338322DF9633005C6142 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				5348DB1D22E0D700004060AA /* GridButton.swift */,
+				5348DB1F22E0D737004060AA /* GridView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -191,7 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5348DB1E22E0D700004060AA /* GridButton.swift in Sources */,
 				2C4C5A8222DFCD91001B687B /* GameViewController.swift in Sources */,
+				5348DB2022E0D737004060AA /* GridView.swift in Sources */,
 				5335B9AD22DF7C99002E7CA9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
