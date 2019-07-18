@@ -3,7 +3,7 @@
 //  BestApp
 //
 //  Created by Madison Kaori Shino on 7/18/19.
-//  Copyright © 2019 Madi S. All rights reserved.
+//  Copyright © 2019 Marcus A. All rights reserved.
 //
 
 import UIKit

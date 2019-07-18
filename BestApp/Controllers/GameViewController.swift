@@ -164,8 +164,7 @@ extension GameViewController {
                 self.clearImage(button: button)
             }
         }
-        alert.addAction(newGameButton)
-        present(alert, animated: true)
+        
     }
 }
 
