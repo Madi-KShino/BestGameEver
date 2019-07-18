@@ -169,7 +169,7 @@ extension GameViewController {
     }
 }
 
-
+//Extension for Views
 extension UIView {
     
     func addCornerRadius(_ radius: CGFloat = 6) {
