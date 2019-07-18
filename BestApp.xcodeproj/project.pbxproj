@@ -69,7 +69,6 @@
 			children = (
 				5335B9C222DF93DC002E7CA9 /* Views */,
 				5335B9C322DF93E9002E7CA9 /* Controllers */,
-				5335B9C122DF93D6002E7CA9 /* Model */,
 				5335B9BE22DF93A0002E7CA9 /* Resources */,
 			);
 			path = BestApp;
@@ -99,13 +98,6 @@
 			children = (
 			);
 			path = "Model Controllers";
-			sourceTree = "<group>";
-		};
-		5335B9C122DF93D6002E7CA9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5335B9C222DF93DC002E7CA9 /* Views */ = {
