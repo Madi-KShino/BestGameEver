@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
     
     //Lifecycle
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()           
         view.backgroundColor = #colorLiteral(red: 0.2038360238, green: 0.6365913749, blue: 0.6057612896, alpha: 1)
         restartButton.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
         restartButton.setTitleColor(.white, for: .normal)
