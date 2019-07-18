@@ -91,6 +91,7 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
     func clearImage(button: UIButton) {
         button.setImage(nil, for: .normal)
         button.imageView?.image = nil
@@ -134,54 +135,32 @@ class GameViewController: UIViewController {
     }
 
     @IBAction func newGameButtonTapped(_ sender: UIButton) {
-        clearImage(button: buttonOne)
-        clearImage(button: buttonTwo)
-        clearImage(button: buttonThree)
-        clearImage(button: buttonFour)
-        clearImage(button: buttonFive)
-        clearImage(button: buttonSix)
-        clearImage(button: buttonSeven)
-        clearImage(button: buttonEight)
-        clearImage(button: buttonNine)
+        for button in buttons {
+            clearImage(button: button)
+        }
     }
-    
-    
 }
 
 extension GameViewController {
     func presentWinnerAlert (player: String) {
         let alert = UIAlertController(title: "WINNER!", message: "Way to go \(player)", preferredStyle: .alert)
         let newGameButton = UIAlertAction(title: "New Game", style: .destructive) { (action) in
-            self.clearImage(button: self.buttonOne)
-            self.clearImage(button: self.buttonTwo)
-            self.clearImage(button: self.buttonThree)
-            self.clearImage(button: self.buttonFour)
-            self.clearImage(button: self.buttonFive)
-            self.clearImage(button: self.buttonSix)
-            self.clearImage(button: self.buttonSeven)
-            self.clearImage(button: self.buttonEight)
-            self.clearImage(button: self.buttonNine)
+            for button in self.buttons {
+                self.clearImage(button: button)
+            }
         }
         alert.addAction(newGameButton)
-        
         present(alert, animated: true)
     }
     
     func presentTieAlert () {
         let alert = UIAlertController(title: "CAT!", message: "It's a tie", preferredStyle: .alert)
         let newGameButton = UIAlertAction(title: "New Game", style: .destructive) { (action) in
-            self.clearImage(button: self.buttonOne)
-            self.clearImage(button: self.buttonTwo)
-            self.clearImage(button: self.buttonThree)
-            self.clearImage(button: self.buttonFour)
-            self.clearImage(button: self.buttonFive)
-            self.clearImage(button: self.buttonSix)
-            self.clearImage(button: self.buttonSeven)
-            self.clearImage(button: self.buttonEight)
-            self.clearImage(button: self.buttonNine)
+            for button in self.buttons {
+                self.clearImage(button: button)
+            }
         }
         alert.addAction(newGameButton)
-        
         present(alert, animated: true)
     }
 }
