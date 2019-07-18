@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonSix: GridButton!
     @IBOutlet weak var buttonSeven: GridButton!
     @IBOutlet weak var buttonEight: GridButton!
-    @IBOutlet weak var buttonNine: GridButton!
+
     @IBOutlet weak var restartButton: UIButton!
     
     //Properties
@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
     
     //Lifecycle
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()           
         view.backgroundColor = #colorLiteral(red: 0.2038360238, green: 0.6365913749, blue: 0.6057612896, alpha: 1)
         restartButton.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
         restartButton.setTitleColor(.white, for: .normal)
@@ -168,7 +168,7 @@ extension GameViewController {
     }
 }
 
-
+//Extension for Views
 extension UIView {
     
     func addCornerRadius(_ radius: CGFloat = 6) {
