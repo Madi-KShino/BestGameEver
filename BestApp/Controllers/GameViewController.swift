@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonSix: GridButton!
     @IBOutlet weak var buttonSeven: GridButton!
     @IBOutlet weak var buttonEight: GridButton!
-
+    @IBOutlet weak var buttonNine: GridButton!
     @IBOutlet weak var restartButton: UIButton!
     
     //Properties
@@ -169,7 +169,7 @@ extension GameViewController {
     }
 }
 
-//Extension for Views
+
 extension UIView {
     
     func addCornerRadius(_ radius: CGFloat = 6) {
