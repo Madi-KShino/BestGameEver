@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="BestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,39 +39,57 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M76-hx-6re">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonOneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cmO-Vh-O24"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQW-MT-IYu">
                                         <rect key="frame" x="0.0" y="228.5" width="101" height="102.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonSevenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgw-vy-rtv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7t-Qv-9H6">
                                         <rect key="frame" x="117.5" y="228.5" width="94.5" height="102.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonEightTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Tr-61-feK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uy5-7t-YqI">
                                         <rect key="frame" x="117.5" y="0.0" width="94.5" height="101"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonTwoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xq0-eL-10c"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNr-oC-Xy8">
                                         <rect key="frame" x="228.5" y="117.5" width="102.5" height="94.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonSixTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QBW-iU-hyb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egw-pl-IDe">
                                         <rect key="frame" x="228.5" y="0.0" width="102.5" height="101"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonThreeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fS-Mb-x3x"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEY-oO-e32">
                                         <rect key="frame" x="0.0" y="117.5" width="101" height="94.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonFourTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5wy-sj-BvD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-zL-73s">
                                         <rect key="frame" x="117.5" y="117.5" width="94.5" height="94.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonFiveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pYh-2O-roM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXU-19-2lG">
                                         <rect key="frame" x="228.5" y="228.5" width="102.5" height="102.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonNineTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0MP-sJ-6A1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,6 +152,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3z-17-nRZ">
                                 <rect key="frame" x="103.5" y="778" width="207" height="30"/>
                                 <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgy-aR-ad8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,6 +168,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonEight" destination="N7t-Qv-9H6" id="454-bI-z41"/>
+                        <outlet property="buttonFive" destination="ru8-zL-73s" id="Vtt-zF-onj"/>
+                        <outlet property="buttonFour" destination="qEY-oO-e32" id="xq5-5C-IVo"/>
+                        <outlet property="buttonNine" destination="YXU-19-2lG" id="116-9I-P3w"/>
+                        <outlet property="buttonOne" destination="M76-hx-6re" id="TK0-Lj-xsk"/>
+                        <outlet property="buttonSeven" destination="JQW-MT-IYu" id="Bgg-qU-c4w"/>
+                        <outlet property="buttonSix" destination="kNr-oC-Xy8" id="zQg-ku-fsY"/>
+                        <outlet property="buttonThree" destination="egw-pl-IDe" id="fHv-em-Ufg"/>
+                        <outlet property="buttonTwo" destination="uy5-7t-YqI" id="3YX-Af-Mml"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
