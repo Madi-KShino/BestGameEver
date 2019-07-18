@@ -17,7 +17,7 @@ class GridView: UIView {
     
     func setUpGridViews() {
         self.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
-        self.layer.borderWidth = 2
+        self.layer.borderWidth = 6
         self.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.addCornerRadius()
     }
