@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Custom Class for Grid Lines
 class GridView: UIView {
 
     override func awakeFromNib() {
@@ -16,9 +17,9 @@ class GridView: UIView {
     }
     
     func setUpGridViews() {
-        self.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+        self.backgroundColor = .clear
         self.layer.borderWidth = 6
-        self.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.layer.borderColor = #colorLiteral(red: 0.1300181448, green: 0.2983654439, blue: 0.274409622, alpha: 1)
         self.addCornerRadius()
     }
 }

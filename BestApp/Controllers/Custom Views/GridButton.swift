@@ -9,6 +9,7 @@
 
 import UIKit
 
+//Custom Class for Buttons (playable spaces)
 class GridButton: UIButton {
 
     override func awakeFromNib() {
@@ -17,7 +18,7 @@ class GridButton: UIButton {
     }
     
     func setUpButtons() {
-        self.backgroundColor = #colorLiteral(red: 0.2038360238, green: 0.6365913749, blue: 0.6057612896, alpha: 1)
-        self.tintColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+        self.backgroundColor = #colorLiteral(red: 0.9999071956, green: 1, blue: 0.999881804, alpha: 1)
+        self.tintColor = #colorLiteral(red: 0.8852323294, green: 0.6136006117, blue: 0.5342262387, alpha: 1)
     }
 }

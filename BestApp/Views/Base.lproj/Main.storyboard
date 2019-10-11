@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,15 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3z-17-nRZ">
+                                <rect key="frame" x="103.5" y="757" width="207" height="71.5"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.75129789113998413" green="0.5982319712638855" blue="0.48625326156616211" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgy-aR-ad8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="yx3-Pw-xOe">
+                                <rect key="frame" x="0.0" y="-56" width="414" height="552"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yx3-Pw-xOe" secondAttribute="height" multiplier="15:20" id="64Q-NL-3I6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loi-S2-zKk">
+                                <rect key="frame" x="97.5" y="178.5" width="219" height="46.5"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="35"/>
+                                <color key="textColor" red="0.80508637428283691" green="0.50664156675338745" blue="0.15279343724250793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xe3-bL-NAO">
-                                <rect key="frame" x="41.5" y="287.5" width="331" height="331"/>
+                                <rect key="frame" x="41.5" y="400.5" width="331" height="331.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jh-sX-4bF" customClass="GridView" customModule="BestApp" customModuleProvider="target">
-                                        <rect key="frame" x="101" y="0.0" width="16.5" height="331"/>
+                                        <rect key="frame" x="101" y="0.0" width="16.5" height="331.5"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-hW-QwB" customClass="GridView" customModule="BestApp" customModuleProvider="target">
-                                        <rect key="frame" x="212" y="0.0" width="16.5" height="331"/>
+                                        <rect key="frame" x="212" y="0.0" width="16.5" height="331.5"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThH-1d-Srj" customClass="GridView" customModule="BestApp" customModuleProvider="target">
@@ -39,60 +59,96 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M76-hx-6re" customClass="GridButton" customModule="BestApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonOneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cmO-Vh-O24"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQW-MT-IYu" customClass="GridButton" customModule="BestApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="228.5" width="101" height="102.5"/>
+                                        <rect key="frame" x="0.0" y="228.5" width="101" height="103"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonSevenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgw-vy-rtv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7t-Qv-9H6" customClass="GridButton" customModule="BestApp" customModuleProvider="target">
-                                        <rect key="frame" x="117.5" y="228.5" width="94.5" height="102.5"/>
+                                        <rect key="frame" x="117.5" y="228.5" width="94.5" height="103"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonEightTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Tr-61-feK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uy5-7t-YqI" customClass="GridButton" customModule="BestApp" customModuleProvider="target">
                                         <rect key="frame" x="117.5" y="0.0" width="94.5" height="101"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonTwoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xq0-eL-10c"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNr-oC-Xy8" customClass="GridButton" customModule="BestApp" customModuleProvider="target">
                                         <rect key="frame" x="228.5" y="117.5" width="102.5" height="94.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonSixTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QBW-iU-hyb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egw-pl-IDe" customClass="GridButton" customModule="BestApp" customModuleProvider="target">
                                         <rect key="frame" x="228.5" y="0.0" width="102.5" height="101"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonThreeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fS-Mb-x3x"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEY-oO-e32" customClass="GridButton" customModule="BestApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="117.5" width="101" height="94.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonFourTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5wy-sj-BvD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-zL-73s" customClass="GridButton" customModule="BestApp" customModuleProvider="target">
                                         <rect key="frame" x="117.5" y="117.5" width="94.5" height="94.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonFiveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pYh-2O-roM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXU-19-2lG" customClass="GridButton" customModule="BestApp" customModuleProvider="target">
-                                        <rect key="frame" x="228.5" y="228.5" width="102.5" height="102.5"/>
+                                        <rect key="frame" x="228.5" y="228.5" width="102.5" height="103"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonNineTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0MP-sJ-6A1"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="4E2-yU-BwZ" firstAttribute="top" secondItem="egw-pl-IDe" secondAttribute="bottom" id="30K-yW-ror"/>
                                     <constraint firstItem="6jh-sX-4bF" firstAttribute="leading" secondItem="M76-hx-6re" secondAttribute="trailing" id="4UD-Qt-Fws"/>
@@ -149,32 +205,21 @@
                                     <constraint firstAttribute="width" secondItem="Xe3-bL-NAO" secondAttribute="height" multiplier="1:1" id="zba-h2-jVZ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3z-17-nRZ">
-                                <rect key="frame" x="103.5" y="757" width="207" height="71.5"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
-                                <state key="normal" title="New Game"/>
-                                <connections>
-                                    <action selector="newGameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgy-aR-ad8"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loi-S2-zKk">
-                                <rect key="frame" x="92.5" y="112" width="229" height="44.5"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="a3z-17-nRZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="0Jp-Hi-9p0"/>
                             <constraint firstItem="Xe3-bL-NAO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7RN-cL-efa"/>
-                            <constraint firstItem="Loi-S2-zKk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="ES6-4n-M8r"/>
+                            <constraint firstItem="Loi-S2-zKk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.45" id="ES6-4n-M8r"/>
+                            <constraint firstItem="yx3-Pw-xOe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-100" id="Ech-O7-y7g"/>
+                            <constraint firstItem="yx3-Pw-xOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Egd-5H-nFw"/>
                             <constraint firstItem="Xe3-bL-NAO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="FxI-fI-04z"/>
-                            <constraint firstItem="Xe3-bL-NAO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="IfU-ei-2K7"/>
+                            <constraint firstItem="Xe3-bL-NAO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.25" id="IfU-ei-2K7"/>
                             <constraint firstItem="a3z-17-nRZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QLZ-Eh-bRQ"/>
                             <constraint firstItem="Loi-S2-zKk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XLw-3f-N8f"/>
                             <constraint firstItem="a3z-17-nRZ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="nc6-bC-izG"/>
                             <constraint firstItem="a3z-17-nRZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.75" id="sEz-YX-cak"/>
+                            <constraint firstItem="yx3-Pw-xOe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tTe-Iy-WKl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -196,4 +241,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1500" height="1996"/>
+    </resources>
+    <color key="tintColor" red="0.33891892429999998" green="0.47391963009999999" blue="0.4980450273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

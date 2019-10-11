@@ -32,14 +32,14 @@ class GameViewController: UIViewController {
     //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()           
-        view.backgroundColor = #colorLiteral(red: 0.2038360238, green: 0.6365913749, blue: 0.6057612896, alpha: 1)
-        restartButton.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
-        restartButton.setTitleColor(.white, for: .normal)
+        view.backgroundColor = #colorLiteral(red: 0.9999071956, green: 1, blue: 0.999881804, alpha: 1)
+        restartButton.backgroundColor = #colorLiteral(red: 0.9999071956, green: 1, blue: 0.999881804, alpha: 1)
         restartButton.addBorder()
-        restartButton.addCornerRadius()
+        restartButton.layer.cornerRadius = restartButton.frame.height / 2
+        restartButton.tintColor = #colorLiteral(red: 0.7804725766, green: 0.5906895995, blue: 0.4685797691, alpha: 1)
     }
     
-    //Win Conditions
+    //All Possible Win Conditions
     func checkForWinner(player: String) {
         if buttonOne.imageView?.image == buttonTwo.imageView?.image && buttonOne.imageView?.image == buttonThree.imageView?.image && buttonOne.imageView?.image != nil {
             presentWinnerAlert(player: player)
@@ -78,7 +78,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    //Button Display
+    //Button Display for Player Turns
     func switchImage(button: GridButton) {
         if button.imageView!.image == nil {
             if playerImage == #imageLiteral(resourceName: "cross") {
@@ -93,7 +93,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    //Clear
+    //Clear Board
     func clearImage(button: UIButton) {
         button.setImage(nil, for: .normal)
         button.imageView?.image = nil
@@ -158,8 +158,8 @@ extension GameViewController {
     }
     
     func presentTieAlert () {
-        let alert = UIAlertController(title: "CAT!", message: "It's a tie", preferredStyle: .alert)
-        let newGameButton = UIAlertAction(title: "New Game", style: .destructive) { (action) in
+        _ = UIAlertController(title: "CAT!", message: "It's a tie", preferredStyle: .alert)
+        _ = UIAlertAction(title: "New Game", style: .destructive) { (action) in
             for button in self.buttons {
                 self.clearImage(button: button)
             }
@@ -168,14 +168,14 @@ extension GameViewController {
     }
 }
 
-
+//Extensions for changing view components
 extension UIView {
     
-    func addCornerRadius(_ radius: CGFloat = 6) {
+    func addCornerRadius(_ radius: CGFloat = 10) {
         self.layer.cornerRadius = radius
     }
     
-    func addBorder(width: CGFloat = 2, color: UIColor = UIColor.white) {
+    func addBorder(width: CGFloat = 5, color: UIColor = #colorLiteral(red: 0.7804725766, green: 0.5906895995, blue: 0.4685797691, alpha: 1)) {
         self.layer.borderColor = color.cgColor
         self.layer.borderWidth = width
     }
